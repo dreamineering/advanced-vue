@@ -29,7 +29,11 @@ const Cats = {
   )
 }
 
-@Component({
+class App extends Vue {
+  names = ["mindy", "john", "kim", "joel", "ben"]
+}
+
+export default Component({
   components: {
     Settings,
     Layout,
@@ -37,8 +41,5 @@ const Cats = {
     AwesomeFooter: Footer,
     Cats
   }
-})
-export default class App extends Vue {
-  names = ["mindy", "john", "kim", "joel", "ben"]
-}
+})(App)
 </script>
