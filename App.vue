@@ -8,6 +8,7 @@
 import Vue from "vue"
 import Component from "vue-class-component"
 
+// Same as using @Component({})
 export default Component({})(
   class App extends Vue {
   message = "Hello from class"
