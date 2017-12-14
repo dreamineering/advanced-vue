@@ -21,16 +21,8 @@ import Settings from "./Settings"
 import Layout from "./Layout"
 import { Header, Footer, Content } from "./components"
 
-@Component({
-  components: {
-    Settings,
-    Layout,
-    AwesomeHeader: Header,
-    AwesomeFooter: Footer,
-    AwesomeContent: Content
-  }
-})
-export default class App extends Vue {
+
+class App extends Vue {
   @Prop({ default: "Hello from Prop decorator" })
   message
 
@@ -38,4 +30,14 @@ export default class App extends Vue {
     this.message = "Goodbye"
   }
 }
+
+export default Component({
+  components: {
+    Settings,
+    Layout,
+    AwesomeHeader: Header,
+    AwesomeFooter: Footer,
+    AwesomeContent: Content
+  }
+})(App)
 </script>
