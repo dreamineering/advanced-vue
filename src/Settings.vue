@@ -7,12 +7,9 @@
 import Vue from "vue"
 import Component from "vue-class-component"
 
-
-class Settings extends Vue {
+@Component({})
+export default class Settings extends Vue {
   header = "Awesome Site"
   footer = "Incredible Copyright"
 }
-
-export default Component({})(Settings)
-
 </script>

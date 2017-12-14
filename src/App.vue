@@ -15,11 +15,7 @@ import Settings from "./Settings"
 import Layout from "./Layout"
 import { Header, Footer, Cats } from "./components"
 
-class App extends Vue {
-  names = ["mindy", "john", "kim", "joel", "ben"]
-}
-
-export default Component({
+@Component({
   components: {
     Settings,
     Layout,
@@ -27,5 +23,8 @@ export default Component({
     AwesomeFooter: Footer,
     Cats
   }
-})(App)
+})
+export default class App extends Vue {
+  names = ["mindy", "john", "kim", "joel", "ben"]
+}
 </script>
