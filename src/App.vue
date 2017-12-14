@@ -15,24 +15,20 @@ import Settings from "./Settings"
 import Layout from "./Layout"
 import { Header, Footer } from "./components"
 
-class App extends Vue {
-  onClick() {
-    this.message = "Goodbye"
-  }
-}
-
-/*
-  Codesandbox does not support decorators. This is the alternate
-  "non-decorator" version (which kinda stinks 😅)
-*/
-Prop({ default: "Hello from Prop decorator" })(App, "message")
-
-export default Component({
+@Component({
   components: {
     Settings,
     Layout,
     Header,
     Footer
   }
-})(App)
+})
+export default class App extends Vue {
+  @Prop({ default: "Hello from Prop decorator" })
+  message
+
+  onClick() {
+    this.message = "Goodbye"
+  }
+}
 </script>
