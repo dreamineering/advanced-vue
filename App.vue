@@ -8,20 +8,19 @@
 import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 
-export default Component({
-  props: {
-    message: {
-      default: "Hello from default prop"
-    }
-  }
-})(
 class App extends Vue {
-  // Decorators not currently supportted in codesandbox
-  // @Prop({ default: "Hello from Prop decorator" })
-  // message
-
   onClick() {
     this.message = "Goodbye"
   }
-})
+}
+
+/*
+  Codesandbox does not support decorators. This is the alternate
+  "non-decorator" version using the Prop decorator function
+  (which kinda stinks 😅)
+*/
+Prop({ default: "Hello from Prop decorator" })(App, "message")
+
+export default Component({})(App)
+
 </script>
