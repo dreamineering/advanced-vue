@@ -7,9 +7,16 @@
 import Vue from "vue"
 import Component from "vue-class-component"
 
-@Component({})
-export default class Settings extends Vue {
+
+class Settings extends Vue {
   header = "Awesome Site"
   footer = "Incredible Copyright"
 }
+
+/*
+  Codesandbox does not support decorators. This is the alternate
+  "non-decorator" version (which kinda stinks 😅)
+*/
+
+export default Component({})(Settings)
 </script>
